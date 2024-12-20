@@ -28,13 +28,13 @@ export default function Post({ type, title, description, link, image, tech }: { 
           muted
           loop
           controlsList="nodownload noplaybackrate"
-          className='rounded-lg w-full object-cover [&::-webkit-media-controls-enclosure]:max-h-[30px] [&::-webkit-media-controls-panel]:bg-transparent'
+          className='rounded-lg w-full x-w-[50px] object-cover [&::-webkit-media-controls-enclosure]:max-h-[30px] [&::-webkit-media-controls-panel]:bg-transparent [&::-webkit-media-controls-timeline]:bg-transparent'
         >
           <source src={image} type={`video/mp4`} />
           Your browser does not support the video tag.
         </video>
       ) : (
-        <img src={image} alt={title} className="" />
+        <img src={image} alt={title} className="max-w-[500px]" />
       )}
       </div>
       

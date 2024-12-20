@@ -4,12 +4,13 @@ import Post from "./components/post";
 import { useState } from "react";
 import ExperienceCard from "./components/ExperienceCard";
 import { HiArrowUpRight } from "react-icons/hi2";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   return (
-    <div className={`flex flex-col min-h-screen px-12 lg:px-64 ${isDarkMode ? 'bg-[#2D1518]' : 'bg-[#FFDCDF]'}`}>
+    <div className={`flex flex-col min-h-screen px-12 lg:px-56 ${isDarkMode ? 'bg-[#261e1f]' : 'bg-[#FFDCDF]'}`}>
       <div className="absolute top-4 right-4">
         <label className="relative inline-flex items-center cursor-pointer">
           <input 
@@ -32,16 +33,32 @@ export default function Home() {
         Caterina Mammola
       </h1>
 
-      <p className={`${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'} mt-12 font-newsreader`}>
+      <div className="flex justify-center gap-2 mt-2">
+        <a href="https://www.linkedin.com/in/caterina-m/"  
+           target="_blank" 
+           rel="noopener noreferrer"
+           className={`font-newsreader hover:underline text-md ${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'} hover:text-[#c02e7e] transition-colors`}>
+          LinkedIn
+        </a>
+        <span className={`font-newsreader text-md ${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'}`}>|</span>
+        <a href="https://github.com/Cat2005" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           className={`font-newsreader hover:underline text-md ${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'} hover:text-[#c02e7e] transition-colors`}>
+          GitHub
+        </a>
+      </div>
+
+      <p className={`${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'} mt-6 font-newsreader `}>
       Hi, I’m Caterina, a 4th-year CS and AI student at the University of Edinburgh. I’m passionate about web development and and love participating in hackathons. Previously, I interned at <a href='https://www.goldmansachs.com/our-firm/careers/students/students-at-gs/software-engineering/' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e]'> Goldman Sachs </a> as a Software Engineer. Currently, I serve as the Tech Secretary and Sponsorship Coordinator for <a href='https://www.comp-soc.com' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e]'> CompSoc</a>, where I manage technical infrastructure and build relationships with sponsors.
 <br></br>
 <br></br>
 Aside from this, I love to teach. I’ve taught maths and computer science for over four years and currently work part-time at <a href='https://www.codecadets.co.uk' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e]'> Code Cadets</a>, teaching coding to primary school children in Edinburgh.
       </p>
 
-      <p className={`${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'} mt-4 font-newsreader`}><span className="font-bold">Languages spoken: </span>English (native), Italian (native), French (fluent)</p>
+      <p className={`${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'} mt-4 font-newsreader text-md`}><span className="font-bold">Languages spoken: </span>English (native), Italian (native), French (fluent)</p>
 
-      <h2 className={`text-2xl font-newsreader ${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'} mt-12 mb-8`}>
+      <h2 className={`text-2xl font-newsreader ${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'} mt-12 mb-8 text-center`}>
         Recent Projects
       </h2>
 
@@ -83,9 +100,9 @@ Aside from this, I love to teach. I’ve taught maths and computer science for o
       image="/posts/raytracer-imgs.png"
       tech={["C++ (no libraries allowed)"]} />
 
-      <p className={`${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'} mt-4 font-newsreader`}>To see more of my work, including 5+ prize-winning hackathon projects,  <a href='https://github.com/Cat2005' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e] hover:underline'> check out my GitHub<HiArrowUpRight className="text-[#c02e7e] inline mb-1" /></a>! </p>
+      <p className={`${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'} mt-4 font-newsreader text-lg`}>To see more of my work, including 5+ prize-winning hackathon projects,  <a href='https://github.com/Cat2005' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e] underline'> check out my GitHub<HiArrowUpRight className="text-[#c02e7e] inline mb-1" /></a>! </p>
 
-<h2 className={`text-2xl font-newsreader ${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'} mt-12 mb-8`}>
+<h2 className={`text-center text-2xl font-newsreader ${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'} mt-12 mb-8`}>
         Professional Experience
       </h2>
 
@@ -102,11 +119,11 @@ Aside from this, I love to teach. I’ve taught maths and computer science for o
 
       <ExperienceCard title="Sponsorship Coordinator, CompSoc"  date="2024-ongoing"
       type={isDarkMode ? "dark" : "light"}
-      description="As the Sponsorship Coordinator for CompSoc, I manage the society's sponsorship efforts. My responsibilities include identifying potential sponsors, reaching out to them, and hosting calls to discuss partnership opportunities. Once a sponsor is signed on, I ensure they are satisfied and their needs are met throughout the partnership. This year, I successfully secured sponsorships from companies including Meta, G-Research, and QRT. You can see our <a href='https://comp-soc.com/sponsors/' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e]'> sponsors for the year on this page</a> (which I designed!)"
+      description="As the Sponsorship Coordinator for CompSoc, I manage the society's sponsorship efforts. My responsibilities include identifying potential sponsors, reaching out to them, and hosting calls to discuss partnership opportunities. Once a sponsor is signed on, I ensure they are satisfied and their needs are met throughout the partnership. This year, I successfully secured sponsorships from companies including Meta, G-Research, and QRT. You can see all our <a href='https://comp-soc.com/sponsors/' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e]'> sponsors for the year on this page</a> (which I designed!)"
       tech={["Prometheus", "Grafana", "Java", "PromQL"]} />
 
      
-<h2 className={`text-2xl font-newsreader ${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'} mt-12 mb-4`}>
+<h2 className={`text-center text-2xl font-newsreader ${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'} mt-12 mb-4`}>
         Teaching
       </h2>
 
