@@ -180,7 +180,7 @@ Aside from this, I love to teach. I’ve taught maths and computer science for o
 <p className={`mb-24 text-center ${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'} mt-8 font-newsreader text-md`}>
     Thanks for checking out my website ❤️ ! 
     <br></br>
-    If you have any questions, please don't hesitate to <a href='mailto:caterina.mammola20@gmail.com' className='text-[#c02e7e] underline'> contact me on email</a> or <a href='https://www.linkedin.com/in/caterina-m/' className='text-[#c02e7e] underline'> LinkedIn</a>.
+    If you have any questions, please don&apos;t hesitate to <a href='mailto:caterina.mammola20@gmail.com' className='text-[#c02e7e] underline'> contact me on email</a> or <a href='https://www.linkedin.com/in/caterina-m/' className='text-[#c02e7e] underline'> LinkedIn</a>.
   </p>
     </div>
 
