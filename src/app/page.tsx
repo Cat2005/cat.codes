@@ -9,7 +9,7 @@ export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   return (
-    <div className={`flex flex-col min-h-screen px-12 lg:px-72 ${isDarkMode ? 'bg-[#2D1518]' : 'bg-[#FFDCDF]'}`}>
+    <div className={`flex flex-col min-h-screen px-12 lg:px-54 ${isDarkMode ? 'bg-[#2D1518]' : 'bg-[#FFDCDF]'}`}>
       <div className="absolute top-4 right-4">
         <label className="relative inline-flex items-center cursor-pointer">
           <input 
