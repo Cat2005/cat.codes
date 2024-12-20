@@ -34,7 +34,7 @@ export default function Post({ type, title, description, link, image, tech }: { 
           Your browser does not support the video tag.
         </video>
       ) : (
-        <img src={image} alt={title} className="max-w-[500px]" />
+        <img src={image} alt={title} className="max-h-[400px] object-cover" />
       )}
       </div>
       
