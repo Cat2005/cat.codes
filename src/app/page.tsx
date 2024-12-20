@@ -94,7 +94,7 @@ Aside from this, I love to teach. I’ve taught maths and computer science for o
       image="/posts/photo-tutorial.mov"
       tech={["React", "Next.js", "Tailwind", "Vercel", "Python", "Selenium"]} />
 
-      <Post title="Ray tracer in C"
+      <Post title="Ray tracer in C++"
       type={isDarkMode ? "light" : "dark"}
       description="For my <a href='https://ksubr.github.io/CGR2024/#Tutorials' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e]'> Computer Graphics: Rendering </a> course, I developed a ray tracer in C++. While I don’t usually highlight university coursework, this one was particularly significant as it was both technically challenging and my first time using C++. The ray tracer includes advanced features such as textures, an acceleration hierarchy, bidirectional reflectance distribution functions (BRDFs), and volumetrics. This project deepened my understanding of rendering techniques and taught me how to optimize performance in a low-level programming environment. I achieved 94% for this work."
       image="/posts/raytracer-imgs.png"
