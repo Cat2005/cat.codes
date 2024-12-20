@@ -34,7 +34,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className={`flex flex-col min-h-screen px-12 lg:px-56 ${isDarkMode ? 'bg-[#261e1f]' : 'bg-[#FFDCDF]'}`}>
+    <div className={`flex flex-col min-h-screen px-8 lg:px-56 ${isDarkMode ? 'bg-[#261e1f]' : 'bg-[#FFDCDF]'}`}>
       <div className="absolute top-4 right-4">
         <label className="relative inline-flex items-center cursor-pointer">
           <input 
