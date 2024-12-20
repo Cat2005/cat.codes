@@ -1,101 +1,168 @@
+"use client"
 import Image from "next/image";
+import Post from "./components/post";
+import { useState } from "react";
+import ExperienceCard from "./components/ExperienceCard";
+import { HiArrowUpRight } from "react-icons/hi2";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+  return (
+    <div className={`flex flex-col min-h-screen px-12 lg:px-72 ${isDarkMode ? 'bg-[#2D1518]' : 'bg-[#FFDCDF]'}`}>
+      <div className="absolute top-4 right-4">
+        <label className="relative inline-flex items-center cursor-pointer">
+          <input 
+            type="checkbox" 
+            className="sr-only peer" 
+            checked={isDarkMode}
+            onChange={() => setIsDarkMode(!isDarkMode)}
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          <div className="w-16 h-8 bg-[#773035] rounded-full peer peer-checked:after:translate-x-8 
+            after:content-[''] after:absolute after:top-1 after:left-1 after:bg-white 
+            after:rounded-full after:h-6 after:w-6 after:transition-all
+            flex items-center justify-between px-2">
+            <span className="text-sm">🌙</span>
+            <span className="text-sm">☀️</span>
+          </div>
+        </label>
+      </div>
+
+      <h1 className={`text-5xl font-newsreader ${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'} mt-28 text-center`}>
+        Caterina Mammola
+      </h1>
+
+      <p className={`${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'} mt-12 font-newsreader`}>
+      Hi, I’m Caterina, a 4th-year CS and AI student at the University of Edinburgh. I’m passionate about web development and and love participating in hackathons. Previously, I interned at <a href='https://www.goldmansachs.com/our-firm/careers/students/students-at-gs/software-engineering/' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e]'> Goldman Sachs </a> as a Software Engineer. Currently, I serve as the Tech Secretary and Sponsorship Coordinator for <a href='https://www.comp-soc.com' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e]'> CompSoc</a>, where I manage technical infrastructure and build relationships with sponsors.
+<br></br>
+<br></br>
+Aside from this, I love to teach. I’ve taught maths and computer science for over four years and currently work part-time at <a href='https://www.codecadets.co.uk' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e]'> Code Cadets</a>, teaching coding to primary school children in Edinburgh.
+      </p>
+
+      <p className={`${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'} mt-4 font-newsreader`}><span className="font-bold">Languages spoken: </span>English (native), Italian (native), French (fluent)</p>
+
+      <h2 className={`text-2xl font-newsreader ${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'} mt-12 mb-8`}>
+        Recent Projects
+      </h2>
+
+      <Post title="XAI for Brain MRI Glioblastoma Diagnosis" 
+      type={isDarkMode ? "light" : "dark"}
+      description=
+      "For my dissertation, I am exploring XAI techniques to enhance the trustworthiness of brain cancer detection systems. Specifically, I am building on prior work with concept bottleneck models, which integrate clinical concepts into the AI pipeline. I am collaborating closely with a clinician to identify key clinical concepts from medical reports, which will be incorporated into the model training process to improve interpretability and reliability." 
+      image="/posts/diss.png"
+      tech={["Python", "TensorFlow"]} />
+
+      <Post title="FlatMouse" 
+      type={isDarkMode ? "light" : "dark"}
+      description=
+      "I built a website for University of Edinburgh students to leave reviews on flats and accommodations they’ve lived in. The platform allows users to add detailed tags, such as mice, mould, or heating issues, to help future tenants make informed decisions. Users can explore an interactive map to view reviews and find accommodations in different areas, and even filter average ratings by letting agency." 
+      link="https://flatmouse.co.uk" 
+      image="/posts/flatmouse.mov"
+      tech={["React", "Amazon S3", "Amazon EC2", "MongoDB", "Node.js", "Express"]} />
+
+      
+
+      <Post title="CompSoc Website" 
+      type={isDarkMode ? "light" : "dark"}
+      description="I co-developed the new website for CompSoc, the Computer Science Society at the University of Edinburgh, alongside my friend <a href='https://www.tomasmaillo.com' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e]'> Tomas Maillo </a>. Our goal was to create a modern and functional platform for members to easily access information. We integrated features like pulling events directly from Google Calendar to ensure the event schedule stays up-to-date and displaying the live number of members on Discord." 
+      link="https://comp-soc.com" 
+      image="/posts/compsoc-website-vid.mov"
+      tech={["React", "Next.js", "Tailwind"]} />
+
+<Post title="Nail Polish Finder" 
+      type={isDarkMode ? "light" : "dark"}
+      description=
+      "I designed a website that allows users to search through thousands of nail polishes by hex code. This was my first experience creating something for a broader, unknown internet audience. <a href='https://www.reddit.com/r/RedditLaqueristas/comments/1hev7gt/website_to_search_nail_polishes_by_colour_and/' rel='noopener noreferrer' className='text-[#c02e7e]'> I shared the project on r/RedditLaqueristas </a> and other Reddit forums. The response was overwhelmingly positive—many people appreciated the functionality and left encouraging comments. I also received valuable feedback that I plan to incorporate to further improve the tool." 
+      link="https://nailpolishfinder.com" 
+      image="/posts/photo-tutorial.mov"
+      tech={["React", "Next.js", "Tailwind", "Vercel", "Python", "Selenium"]} />
+
+      <Post title="Ray tracer in C"
+      type={isDarkMode ? "light" : "dark"}
+      description="For my <a href='https://ksubr.github.io/CGR2024/#Tutorials' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e]'> Computer Graphics: Rendering </a> course, I developed a ray tracer in C. While I don’t usually highlight university coursework, this one was particularly significant as it was both technically challenging and my first time using C. The ray tracer includes advanced features such as textures, an acceleration hierarchy, bidirectional reflectance distribution functions (BRDFs), and volumetrics. This project deepened my understanding of rendering techniques and taught me how to optimize performance in a low-level programming environment. I achieved 94% for this work."
+      image="/posts/raytracer-imgs.png"
+      tech={["C (no libraries allowed)"]} />
+
+      <p className={`${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'} mt-4 font-newsreader`}>To see more of my work, including 5+ prize-winning hackathon projects,  <a href='https://github.com/Cat2005' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e] hover:underline'> check out my GitHub<HiArrowUpRight className="text-[#c02e7e] inline mb-1" /></a>! </p>
+
+<h2 className={`text-2xl font-newsreader ${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'} mt-12 mb-8`}>
+        Professional Experience
+      </h2>
+
+      <ExperienceCard title="Intern, Goldman Sachs"  date="Summer 2024"
+      type={isDarkMode ? "dark" : "light"}
+      description="I worked on developing a dashboard using Prometheus, Grafana, Java, and PromQL to monitor infrastructure metrics for the generation of regulatory reports. The system was designed for the 1,000+ engineers in the Regulatory Engineering division to onboard their own frameworks and monitor their operations. It tracked key metrics such as processing lag and failure rates across clusters, ensuring better observability and faster issue resolution."
+      tech={["Prometheus", "Grafana", "Java", "PromQL"]} />
+
+<ExperienceCard title="Tech Secretary, CompSoc"  date="2024-ongoing"
+      type={isDarkMode ? "dark" : "light"}
+      description="As the Tech Secretary for CompSoc, I am responsible for managing the society's technical infrastructure. This includes overseeing CompSoc's Linux servers and handling domain management. Additionally, I maintain and manage the <a href='https://infball.comp-soc.com/' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e]'> website for Infball</a>,  supporting an event with over 300 attendees with features such as integrated payment processing, QR code generation, and automated email confirmations."
+      tech={["Discord", "GitHub", "Hackathons"]} />
+
+
+      <ExperienceCard title="Sponsorship Coordinator, CompSoc"  date="2024-ongoing"
+      type={isDarkMode ? "dark" : "light"}
+      description="As the Sponsorship Coordinator for CompSoc, I manage the society's sponsorship efforts. My responsibilities include identifying potential sponsors, reaching out to them, and hosting calls to discuss partnership opportunities. Once a sponsor is signed on, I ensure they are satisfied and their needs are met throughout the partnership. This year, I successfully secured sponsorships from companies including Meta, G-Research, and QRT. You can see our <a href='https://comp-soc.com/sponsors/' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e]'> sponsors for the year on this page</a> (which I designed!)"
+      tech={["Prometheus", "Grafana", "Java", "PromQL"]} />
+
+     
+<h2 className={`text-2xl font-newsreader ${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'} mt-12 mb-4`}>
+        Teaching
+      </h2>
+
+    <p className={`${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'} mt-2 font-newsreader mb-8`}>I also love to teach and have been teaching Maths and Computer Science on and off for the past 4 years. Below are all of my teaching experiences.</p>
+
+
+    <ExperienceCard title="Hackathon Organiser, Code Cadets"  date="2024-ongoing"
+      type={isDarkMode ? "dark" : "light"}
+      description="This spring, I have the amazing opportunity to plan and run a hackathon for 
+      children in the local Edinburgh community. I am really excited to work with <a href='https://www.codecadets.co.uk' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e]'> Code Cadets</a> 
+      to make this happen. Along with my co-organiser, we are responsible for everything from coming up with age-appropriate challenges
+      to the organisation of the day and the prize structure. This was my first time doing
+      a real deep dive into pedagogy and how best to teach computational thinking to children."
+      tech={["Python", "HTML", "CSS", "JavaScript"]} />
+
+    <ExperienceCard title="Tutor, Code Cadets"  date="2024-ongoing"
+      type={isDarkMode ? "dark" : "light"}
+      description="I teach coding to primary school children in Edinburgh in after-school clubs. 
+      They are normally very young (5-8) years old, so we mainly teach block coding and some basic Python and HTML."
+      tech={["Python", "HTML", "CSS", "JavaScript"]} />
+
+
+
+
+<ExperienceCard title="AI Course Organiser and Tutor, MyTutor"  date="Summer 2023"
+      type={isDarkMode ? "dark" : "light"}
+      description="I created materials for and taught an introductory AI course aimed towards high school students aged 13-16, which
+      I delivered over livestream on <a href='https://www.mytutor.co.uk' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e]'> MyTutor's platform</a>. I created a range of resources for a total of 8 lessons to make AI more accessible to a younger audience.
+      "
+      tech={["Python", "HTML", "CSS", "JavaScript"]} />
+
+            
+
+
+<ExperienceCard title="Tutor and Marker, University of Edinburgh"  date="Winter 2023"
+      type={isDarkMode ? "dark" : "light"}
+      description="I tutored a <a href='https://opencourse.inf.ed.ac.uk/inf1a' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e]'> first year course in Computer Science</a> in Functional Programming and Computational Logic. I worked with a group of 10 students to help them understand the material and mark their work each week."
+      tech={["Python", "HTML", "CSS", "JavaScript"]} />
+
+
+<ExperienceCard title="Private Maths Tutor, Edinburgh"  date="2021-2023"
+      type={isDarkMode ? "dark" : "light"}
+      description="I tutored maths to children in Edinburgh for over 2 years, teaching Nat5, Highers, and Advanced Higher Maths (Scottish curriculum).
+      I have taught a range of students, from high-achieving students to those really struggling
+      with maths. I learned a lot about how to teach maths to different students and how to make it more accessible."
+      tech={["Python", "HTML", "CSS", "JavaScript"]} />
+
+
+<ExperienceCard title="Maths Tutor, MyTutor"  date="2021-2023"
+      type={isDarkMode ? "dark" : "light"}
+      description="I have taught maths online for over 2 years on <a href='https://www.mytutor.co.uk' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e]'> MyTutor</a>, a private tutoring company in the UK. I have taught a range of topics, including GCSE Maths, A-Level Maths, and Further Maths."
+      tech={["Python", "HTML", "CSS", "JavaScript"]} />
+
     </div>
+
+    
+
   );
 }
