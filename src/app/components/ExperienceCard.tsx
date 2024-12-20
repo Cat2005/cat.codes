@@ -9,14 +9,14 @@ interface ExperienceCardProps {
 
 export default function ExperienceCard({ title, type, date,description, link, tech }: ExperienceCardProps) {
     return (
-        <div className={`${type === 'dark' ? 'bg-[#fecfd2]' : 'bg-[#5c2f2f]'} p-4 rounded-lg mb-8`}>
+        <div className={`${type === 'dark' ? 'bg-[#fecfd2]' : 'bg-[#e7b7b7]'} p-4 rounded-lg mb-8`}>
             <div className="flex justify-between">
-                <h2 className={`font-newsreader text-xl mb-4 ${type === 'dark' ? 'text-[#773035]' : 'text-[#f0c5c8]'}`}>{title}</h2> 
-            <p className={`font-newsreader inline text-sm ${type === 'dark' ? 'text-[#773035]' : 'text-[#f0c5c8]'}`}>{date}</p>
+                <h2 className={`font-newsreader text-xl mb-4 ${type === 'dark' ? 'text-[#773035]' : 'text-[#773035]'}`}>{title}</h2> 
+            <p className={`font-newsreader inline text-sm ${type === 'dark' ? 'text-[#773035]' : 'text-[#773035]'}`}>{date}</p>
 
         
             </div>
-            <p className={`font-newsreader mt-2 ${type === 'light' ? 'text-[#f0c5c8]' : 'text-[#773035]'}`} 
+            <p className={`font-newsreader mt-2 ${type === 'light' ? 'text-[#773035]' : 'text-[#773035]'}`} 
         dangerouslySetInnerHTML={{ 
           __html: description.replace(
             /<a\s+href=/g, 

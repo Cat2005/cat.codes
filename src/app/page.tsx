@@ -79,9 +79,9 @@ Aside from this, I love to teach. I’ve taught maths and computer science for o
 
       <Post title="Ray tracer in C"
       type={isDarkMode ? "light" : "dark"}
-      description="For my <a href='https://ksubr.github.io/CGR2024/#Tutorials' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e]'> Computer Graphics: Rendering </a> course, I developed a ray tracer in C. While I don’t usually highlight university coursework, this one was particularly significant as it was both technically challenging and my first time using C. The ray tracer includes advanced features such as textures, an acceleration hierarchy, bidirectional reflectance distribution functions (BRDFs), and volumetrics. This project deepened my understanding of rendering techniques and taught me how to optimize performance in a low-level programming environment. I achieved 94% for this work."
+      description="For my <a href='https://ksubr.github.io/CGR2024/#Tutorials' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e]'> Computer Graphics: Rendering </a> course, I developed a ray tracer in C++. While I don’t usually highlight university coursework, this one was particularly significant as it was both technically challenging and my first time using C++. The ray tracer includes advanced features such as textures, an acceleration hierarchy, bidirectional reflectance distribution functions (BRDFs), and volumetrics. This project deepened my understanding of rendering techniques and taught me how to optimize performance in a low-level programming environment. I achieved 94% for this work."
       image="/posts/raytracer-imgs.png"
-      tech={["C (no libraries allowed)"]} />
+      tech={["C++ (no libraries allowed)"]} />
 
       <p className={`${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'} mt-4 font-newsreader`}>To see more of my work, including 5+ prize-winning hackathon projects,  <a href='https://github.com/Cat2005' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e] hover:underline'> check out my GitHub<HiArrowUpRight className="text-[#c02e7e] inline mb-1" /></a>! </p>
 
