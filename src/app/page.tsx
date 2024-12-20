@@ -1,13 +1,37 @@
 "use client"
 import Image from "next/image";
 import Post from "./components/post";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ExperienceCard from "./components/ExperienceCard";
 import { HiArrowUpRight } from "react-icons/hi2";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [clickCount, setClickCount] = useState<number | null>(null);
+  const [isClicked, setIsClicked] = useState(false);
+
+  const handleClick = async () => {
+    const response = await fetch('/api/clicks', { method: 'POST' });
+    const data = await response.json();
+    setClickCount(data.clicks);
+    setIsClicked(true);
+  };
+
+  function getOrdinalSuffix(n: number) {
+    const j = n % 10;
+    const k = n % 100;
+    if (j === 1 && k !== 11) return "st";
+    if (j === 2 && k !== 12) return "nd";
+    if (j === 3 && k !== 13) return "rd";
+    return "th";
+  }
+
+  useEffect(() => {
+    fetch('/api/clicks')
+      .then(res => res.json())
+      .then(data => setClickCount(data.clicks));
+  }, []);
 
   return (
     <div className={`flex flex-col min-h-screen px-12 lg:px-56 ${isDarkMode ? 'bg-[#261e1f]' : 'bg-[#FFDCDF]'}`}>
@@ -27,6 +51,21 @@ export default function Home() {
             <span className="text-sm">☀️</span>
           </div>
         </label>
+      </div>
+
+      <div className="absolute top-4 left-4">
+        <button
+          onClick={handleClick}
+          className={`font-newsreader text-xs px-4 py-2 rounded-lg transition-all duration-200 
+            ${isDarkMode 
+              ? !isClicked ? 'bg-[#261e1f] text-[#773035] hover:bg-[#e7b7b7]' : 'bg-[#261e1f] text-[#261e1f] hover:text-[#773035] hover:bg-[#e7b7b7]'
+              : !isClicked ? 'bg-[#FFDCDF] text-[#773035] hover:bg-[#FFC3C3]' : 'bg-[#FFDCDF] text-[#FFDCDF] hover:text-[#773035] hover:bg-[#FFC3C3]'
+            }`}
+        >
+          {!isClicked
+            ? "Click here!" 
+            : <>You&apos;re the {clickCount}{getOrdinalSuffix(clickCount || 0)} person to<br/>click this button :)</>}
+        </button>
       </div>
 
       <h1 className={`text-5xl font-newsreader ${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'} mt-28 text-center`}>
