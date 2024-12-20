@@ -53,7 +53,7 @@ export default function Home() {
         </label>
       </div>
 
-      <div className="absolute top-4 left-4">
+      {/* <div className="absolute top-4 left-4">
         <button
           onClick={handleClick}
           className={`font-newsreader text-xs px-4 py-2 rounded-lg transition-all duration-200 
@@ -66,7 +66,7 @@ export default function Home() {
             ? "Click here!" 
             : <>You&apos;re the {clickCount}{getOrdinalSuffix(clickCount || 0)} person to<br/>click this button :)</>}
         </button>
-      </div>
+      </div> */}
 
       <h1 className={`text-5xl font-newsreader ${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'} mt-28 text-center`}>
         Caterina Mammola
