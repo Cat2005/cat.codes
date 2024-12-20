@@ -123,7 +123,7 @@ Aside from this, I love to teach. I’ve taught maths and computer science for o
       tech={["Prometheus", "Grafana", "Java", "PromQL"]} />
 
      
-<h2 className={`text-center text-2xl font-newsreader ${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'} mt-12 mb-4`}>
+<h2 className={`text-center text-2xl font-newsreader ${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'} mt-8 mb-4`}>
         Teaching
       </h2>
 
@@ -177,6 +177,11 @@ Aside from this, I love to teach. I’ve taught maths and computer science for o
       description="I have taught maths online for over 2 years on <a href='https://www.mytutor.co.uk' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e]'> MyTutor</a>, a private tutoring company in the UK. I have taught a range of topics, including GCSE Maths, A-Level Maths, and Further Maths."
       tech={["Python", "HTML", "CSS", "JavaScript"]} />
 
+<p className={`mb-24 text-center ${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'} mt-8 font-newsreader text-md`}>
+    Thanks for checking out my website ❤️ ! 
+    <br></br>
+    If you have any questions, please don't hesitate to <a href='mailto:caterina.mammola20@gmail.com' className='text-[#c02e7e] underline'> contact me on email</a> or <a href='https://www.linkedin.com/in/caterina-m/' className='text-[#c02e7e] underline'> LinkedIn</a>.
+  </p>
     </div>
 
     
