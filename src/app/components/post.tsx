@@ -5,10 +5,10 @@ export default function Post({ type, title, description, link, image, tech }: { 
   const isVideo = image.endsWith('.mp4') || image.endsWith('.webm') || image.endsWith('.mov');
     
   return (
-    <div className={`mb-12 p-4 rounded-lg ${type === 'dark' ? 'bg-[#5c2f2f]' : 'bg-[#fecfd2]'}`}>
+    <div className={`mb-12 p-4 rounded-lg ${type === 'dark' ? 'bg-[#e7b7b7]' : 'bg-[#fecfd2]'}`}>
 
         <div className="flex justify-between">
-      <h3 className={`${link ? 'hover:underline' : ''} font-newsreader text-xl mb-4 ${type === 'dark' ? 'text-[#f0c5c8]' : 'text-[#773035]'}`}>
+      <h3 className={`${link ? 'hover:underline' : ''} font-newsreader text-xl mb-4 ${type === 'dark' ? 'text-[#773035]' : 'text-[#773035]'}`}>
         <a href={link} target="_blank" rel="noopener noreferrer">
           {title}
           {link && (
@@ -37,7 +37,7 @@ export default function Post({ type, title, description, link, image, tech }: { 
       )}
       </div>
       
-      <p className={`font-newsreader mt-4 ${type === 'dark' ? 'text-[#f0c5c8]' : 'text-[#773035]'}`} 
+      <p className={`font-newsreader mt-4 ${type === 'dark' ? 'text-[#773035]' : 'text-[#773035]'}`} 
         dangerouslySetInnerHTML={{ 
           __html: description.replace(
             /<a\s+href=/g, 
@@ -49,7 +49,7 @@ export default function Post({ type, title, description, link, image, tech }: { 
         }}>
       </p>
 
-      <p className={`font-newsreader  mt-4 ${type === 'dark' ? 'text-[#f0c5c8]' : 'text-[#773035]'}`}>
+      <p className={`font-newsreader  mt-4 ${type === 'dark' ? 'text-[#773035]' : 'text-[#773035]'}`}>
 
         <span className=" text-[#c02e7e]">Tech Stack:</span> {tech.join(', ')}
       </p>
