@@ -27,7 +27,8 @@ export default function Post({ type, title, description, link, image, tech }: { 
           autoPlay
           muted
           loop
-          className='rounded-lg w-full object-cover'
+          controlsList="nodownload noplaybackrate"
+          className='rounded-lg w-full object-cover [&::-webkit-media-controls-enclosure]:max-h-[30px] [&::-webkit-media-controls-panel]:bg-[#fecfd2]/50'
         >
           <source src={image} type={`video/mp4`} />
           Your browser does not support the video tag.
