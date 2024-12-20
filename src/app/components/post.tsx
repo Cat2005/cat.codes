@@ -5,7 +5,7 @@ export default function Post({ type, title, description, link, image, tech }: { 
   const isVideo = image.endsWith('.mp4') || image.endsWith('.webm') || image.endsWith('.mov');
     
   return (
-    <div className={`mb-12 p-4 rounded-lg ${type === 'dark' ? 'bg-[#e7b7b7]' : 'bg-[#fecfd2]'}`}>
+    <div className={`mb-12 p-4 rounded-lg transition-transform duration-200 hover:scale-[1.02] ${type === 'dark' ? 'bg-[#e7b7b7]' : 'bg-[#fecfd2]'}`}>
 
         <div className="flex justify-between">
       <h3 className={`${link ? 'hover:underline' : ''} font-newsreader text-xl mb-4 ${type === 'dark' ? 'text-[#773035]' : 'text-[#773035]'}`}>

@@ -9,7 +9,7 @@ interface ExperienceCardProps {
 
 export default function ExperienceCard({ title, type, date,description, link, tech }: ExperienceCardProps) {
     return (
-        <div className={`${type === 'dark' ? 'bg-[#fecfd2]' : 'bg-[#e7b7b7]'} p-4 rounded-lg mb-8`}>
+        <div className={`${type === 'dark' ? 'bg-[#fecfd2]' : 'bg-[#e7b7b7]'} transition-transform duration-200 hover:scale-[1.02]  p-4 rounded-lg mb-8`}>
             <div className="flex justify-between">
                 <h2 className={`font-newsreader text-xl mb-4 ${type === 'dark' ? 'text-[#773035]' : 'text-[#773035]'}`}>{title}</h2> 
             <p className={`font-newsreader inline text-sm ${type === 'dark' ? 'text-[#773035]' : 'text-[#773035]'}`}>{date}</p>
