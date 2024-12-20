@@ -11,8 +11,8 @@ export default function ExperienceCard({ title, type, date,description, link, te
     return (
         <div className={`${type === 'dark' ? 'bg-[#fecfd2]' : 'bg-[#5c2f2f]'} p-4 rounded-lg mb-8`}>
             <div className="flex justify-between">
-                <h2 className={`font-newsreader text-black text-xl mb-4 ${type === 'dark' ? 'text-[#773035]' : 'text-[#f0c5c8]'}`}>{title}</h2> 
-            <p className={`font-newsreader inline text-black text-sm ${type === 'dark' ? 'text-[#773035]' : 'text-[#f0c5c8]'}`}>{date}</p>
+                <h2 className={`font-newsreader text-xl mb-4 ${type === 'dark' ? 'text-[#773035]' : 'text-[#f0c5c8]'}`}>{title}</h2> 
+            <p className={`font-newsreader inline text-sm ${type === 'dark' ? 'text-[#773035]' : 'text-[#f0c5c8]'}`}>{date}</p>
 
         
             </div>
