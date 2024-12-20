@@ -50,7 +50,7 @@ export default function Home() {
       </div>
 
       <p className={`${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'} mt-6 font-newsreader `}>
-      Hi, I’m Caterina, a 4th-year CS and AI student at the University of Edinburgh. I’m passionate about web development and and love participating in hackathons. Previously, I interned at <a href='https://www.goldmansachs.com/our-firm/careers/students/students-at-gs/software-engineering/' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e]'> Goldman Sachs </a> as a Software Engineer. Currently, I serve as the Tech Secretary and Sponsorship Coordinator for <a href='https://www.comp-soc.com' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e]'> CompSoc</a>, where I manage technical infrastructure and build relationships with sponsors.
+      Hi, I’m Caterina, a 4th-year CS and AI student at the University of Edinburgh. I’m passionate about web development and and love doing hackathons. Previously, I interned at <a href='https://www.goldmansachs.com/our-firm/careers/students/students-at-gs/software-engineering/' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e]'> Goldman Sachs </a> as a Software Engineer. Currently, I serve as the Tech Secretary and Sponsorship Coordinator for <a href='https://www.comp-soc.com' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e]'> CompSoc</a>, where I manage technical infrastructure and build relationships with sponsors.
 <br></br>
 <br></br>
 Aside from this, I love to teach. I’ve taught maths and computer science for over four years and currently work part-time at <a href='https://www.codecadets.co.uk' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e]'> Code Cadets</a>, teaching coding to primary school children in Edinburgh.
@@ -81,7 +81,7 @@ Aside from this, I love to teach. I’ve taught maths and computer science for o
 
       <Post title="CompSoc Website" 
       type={isDarkMode ? "light" : "dark"}
-      description="I co-developed the new website for CompSoc, the Computer Science Society at the University of Edinburgh, alongside my friend <a href='https://www.tomasmaillo.com' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e]'> Tomas Maillo </a>. Our goal was to create a modern and functional platform for members to easily access information. We integrated features like pulling events directly from Google Calendar to ensure the event schedule stays up-to-date and displaying the live number of members on Discord." 
+      description="I co-developed the new website for CompSoc, the Computer Science Society at the University of Edinburgh, alongside my friend <a href='https://www.tomasmaillo.com' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e]'> Tomas Maillo </a>. Our goal was to create a modern and functional platform for members to easily access information. We integrated features like pulling events directly from Google Calendar to ensure the event schedule stays up-to-date and displaying the live number of members on Discord. The website gets over 7000 unique visitors per month." 
       link="https://comp-soc.com" 
       image="/posts/compsoc-website-vid.mov"
       tech={["React", "Next.js", "Tailwind"]} />
