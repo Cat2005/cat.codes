@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import ExperienceCard from "./components/ExperienceCard";
 import { HiArrowUpRight } from "react-icons/hi2";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
+import HackathonCard from "./components/HackathonCard";
 
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -93,10 +94,10 @@ export default function Home() {
       </div>
 
       <p className={`${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'} mt-6 font-newsreader `}>
-      Hi, I’m Caterina, a 4th-year CS and AI student at the University of Edinburgh. I’m passionate about web dev and love doing hackathons. Previously, I interned at <a href='https://www.goldmansachs.com/our-firm/careers/students/students-at-gs/software-engineering/' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e]'> Goldman Sachs </a> as a Software Engineer. Currently, I serve as the Tech Secretary and Sponsorship Coordinator for <a href='https://www.comp-soc.com' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e]'> CompSoc</a>, where I manage technical infrastructure and build relationships with sponsors.
+      Hi, I’m Caterina, a 4th-year CS and AI student at the University of Edinburgh. I’m passionate about web dev and love doing hackathons. Previously, I interned at <a href='https://www.goldmansachs.com/our-firm/careers/students/students-at-gs/software-engineering/' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e] hover:underline'> Goldman Sachs </a> as a Software Engineer. Currently, I serve as the Tech Secretary and Sponsorship Coordinator for <a href='https://www.comp-soc.com' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e] hover:underline'> CompSoc</a>, where I manage technical infrastructure and build relationships with sponsors.
 <br></br>
 <br></br>
-Aside from this, I love to teach. I’ve taught maths and computer science for over four years and currently work part-time at <a href='https://www.codecadets.co.uk' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e]'> Code Cadets</a>, teaching coding to primary school children in Edinburgh.
+Aside from this, I love to teach. I’ve taught maths and computer science for over four years and currently work part-time at <a href='https://www.codecadets.co.uk' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e] hover:underline'> Code Cadets</a>, teaching coding to primary school children in Edinburgh.
       </p>
 
       <p className={`${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'} mt-4 font-newsreader text-md`}><span className="font-bold">Languages spoken: </span>English (native), Italian (native), French (fluent)</p>
@@ -164,6 +165,66 @@ Aside from this, I love to teach. I’ve taught maths and computer science for o
       type={isDarkMode ? "dark" : "light"}
       description="As the Sponsorship Coordinator for CompSoc, I manage the society's sponsorship efforts. My responsibilities include identifying potential sponsors, reaching out to them, and hosting calls to discuss partnership opportunities. Once a sponsor is signed on, I ensure they are satisfied and their needs are met throughout the partnership. This year, I successfully secured sponsorships from companies including Meta, G-Research, and QRT. You can see all our <a href='https://comp-soc.com/sponsors/' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e]'> sponsors for the year on this page</a> (which I designed!)"
       tech={["Prometheus", "Grafana", "Java", "PromQL"]} />
+
+
+<h2 className={`text-center text-2xl font-newsreader ${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'} mt-8 mb-4`}>
+        Hackathons
+      </h2>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 relative place-items-center">
+        <HackathonCard 
+          hackathon={{
+            name: "Neuphonic Hackathon, 2nd place",
+            projectTitle: "Emergency Services Text-to-Speech",
+            description: "I worked to a team of 2 to develop a system enabling users to contact emergency services via text in countries where SMS emergency access isn't supported. Using Twilio API for messaging and Neuphonic API for text-to-speech and speech-to-text, we created a two-way communication tool that converts text messages into speech for operators and their responses back into text. This solution makes emergency services accessible to those unable to make voice calls.",
+            image: "/posts/neuphonic.jpeg", // optional
+            tech: ["Twilio API", "Neuphonic API"]
+          }}
+          isDarkMode={isDarkMode}
+        />
+
+        <HackathonCard 
+          hackathon={{
+            name: "Hack the Burgh, overall winner",
+            projectTitle: "NoteVec: AI-powered note-taking app",
+            description: "Project description goes here...",
+            image: "/posts/nv.png" // optional
+          }}
+          isDarkMode={isDarkMode}
+        />
+
+<HackathonCard 
+          hackathon={{
+            name: "ICHack24, Marshall Wace runner-up",
+            projectTitle: "NoteVec: AI-powered note-taking app",
+            description: "Project description goes here...",
+            image: "/posts/a.png" // optional
+          }}
+          isDarkMode={isDarkMode}
+        />
+
+
+<HackathonCard 
+          hackathon={{
+            name: "HackZurich, Finalist",
+            projectTitle: "Migros Nudge:Real-time sustainability scoring",
+            description: "Project description goes here...",
+            image: "/posts/hackz.png" // optional
+          }}
+          isDarkMode={isDarkMode}
+        />
+
+
+<HackathonCard 
+          hackathon={{
+            name: "AthenaHack, overall winner",
+            projectTitle: "NoteVec: AI-powered note-taking app",
+            description: "Project description goes here...",
+            image: "/path/to/image.jpg" // optional
+          }}
+          isDarkMode={isDarkMode}
+        />
+      </div>
+
 
      
 <h2 className={`text-center text-2xl font-newsreader ${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'} mt-8 mb-4`}>
