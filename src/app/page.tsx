@@ -167,7 +167,7 @@ Aside from this, I love to teach. I’ve taught maths and computer science for o
       tech={["Prometheus", "Grafana", "Java", "PromQL"]} />
 
 
-<h2 className={`text-center text-2xl font-newsreader ${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'} mt-8 mb-4`}>
+{/* <h2 className={`text-center text-2xl font-newsreader ${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'} mt-8 mb-4`}>
         Hackathons
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 relative place-items-center">
@@ -223,7 +223,7 @@ Aside from this, I love to teach. I’ve taught maths and computer science for o
           }}
           isDarkMode={isDarkMode}
         />
-      </div>
+      </div> */}
 
 
      
