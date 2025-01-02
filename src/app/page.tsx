@@ -35,7 +35,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className={`flex flex-col min-h-screen px-8 lg:px-56 ${isDarkMode ? 'bg-[#261e1f]' : 'bg-[#FFDCDF]'}`}
+    <div className={`flex flex-col min-h-screen px-8 md:px-56 lg:px-72 ${isDarkMode ? 'bg-[#261e1f]' : 'bg-[#FFDCDF]'}`}
       style={{
         ["--selection-background" as any]: isDarkMode ? "#b1427d" : "#b1427d",
         ["--selection-text" as any]: isDarkMode ? "#FFDCDF" : "#FFDCDF"
