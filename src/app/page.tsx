@@ -132,8 +132,7 @@ Aside from this, I love to teach. I’ve taught maths and computer science for o
 
 <Post title="Nail Polish Finder" 
       type={isDarkMode ? "light" : "dark"}
-      description=
-      "I designed a website that allows users to search through thousands of nail polishes by hex code. This was my first experience creating something for a broader, unknown internet audience. <a href='https://www.reddit.com/r/RedditLaqueristas/comments/1hev7gt/website_to_search_nail_polishes_by_colour_and/' rel='noopener noreferrer' className='text-[#c02e7e]'> I shared the project on r/RedditLaqueristas </a> and other Reddit forums. The response was overwhelmingly positive—many people appreciated the functionality and left encouraging comments. I also received valuable feedback that I plan to incorporate to further improve the tool." 
+      description= "I designed a website that allows users to search through thousands of nail polishes by hex code. This was my first experience creating something for a broader, unknown internet audience. The project quickly gained traction, with some of my posts reaching 5 million views  and the site receiving more than 100,000 visits within 24 hours. The response was overwhelmingly positive—many people appreciated the functionality and left encouraging comments. I also received valuable feedback that has allowed me to iterate on the website and improve its usability."
       link="https://nailpolishfinder.com" 
       image="/posts/photo-tutorial.mov"
       tech={["React", "Next.js", "Tailwind", "Vercel", "Python", "Selenium"]} />
