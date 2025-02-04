@@ -107,7 +107,7 @@ export default function Home() {
       </div>
 
       <p className={`${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'} mt-6 font-newsreader `}>
-      Hi, I'm Caterina, a 4th-year CS and AI student at the University of Edinburgh. I'm passionate about web dev and love doing hackathons. 
+      Hi, I&apos;m Caterina, a 4th-year CS and AI student at the University of Edinburgh. I&apos;m passionate about web dev and love doing hackathons. 
       Previously, I interned at <div className='text-[#c02e7e] hover:underline inline'> Goldman Sachs </div> as a Software Engineer. 
       Currently, I serve as the Tech Secretary and Sponsorship Coordinator 
       for <a href="https://comp-soc.com"  
@@ -123,7 +123,7 @@ export default function Home() {
        where I manage technical infrastructure and build relationships with sponsors.
 <br></br>
 <br></br>
-Aside from this, I love to teach. I've taught maths and computer science for over four years and 
+Aside from this, I love to teach. I&apos;ve taught maths and computer science for over four years and 
 currently work part-time at 
 <a href="https://www.codecadets.co.uk"  
              target="_blank" 

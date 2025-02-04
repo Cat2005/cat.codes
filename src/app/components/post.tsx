@@ -9,18 +9,25 @@ export default function Post({ type, title, description, link, image, tech }: { 
 
         <div className="flex justify-between">
       <h3 className={`${link ? 'hover:underline' : ''} font-newsreader text-xl mb-4 ${type === 'dark' ? 'text-[#773035]' : 'text-[#773035]'}`}>
-        <a href={link} target="_blank" rel="noopener noreferrer">
-          {title}
-          {link && (
-            <HiArrowUpRight className="text-[#c02e7e] inline mb-1 ml-1" />
-          )}
-        </a>
+      <a href={link}  
+             target="_blank" 
+             rel="noopener noreferrer"
+             className={`font-newsreader text-md text-[#773035] transition-colors relative group`}>
+            <span className="inline-flex items-center">
+              {title}
+              {link && (
+                <HiArrowUpRight className="text-[#c02e7e] inline mb-0.5 text-xs ml-0.5" />
+              )}
+            </span>
+            <span className={`absolute left-0 right-0 bottom-0 border-b border-transparent ${link ? 'group-hover:border-current' : ''}`}></span>
+          </a> 
       </h3>
       </div>
       <div className={`flex justify-center w-full mx-auto p-4 rounded-lg`}>
 
 
       {isVideo ? (
+        <a href={link} target="_blank" rel="noopener noreferrer">
         <video 
           playsInline
           controls
@@ -33,6 +40,7 @@ export default function Post({ type, title, description, link, image, tech }: { 
           <source src={image} type={`video/mp4`} />
           Your browser does not support the video tag.
         </video>
+        </a>
       ) : (
         <img src={image} alt={title} className="max-h-[400px] object-cover" />
       )}
