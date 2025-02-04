@@ -19,7 +19,7 @@ export default function Post({ type, title, description, link, image, tech }: { 
                 <HiArrowUpRight className="text-[#c02e7e] inline mb-0.5 text-xs ml-0.5" />
               )}
             </span>
-            <span className={`absolute left-0 right-0 bottom-0 border-b border-transparent ${link ? 'group-hover:border-current' : ''}`}></span>
+            <span className={`text-[#c02e7e] absolute left-0 right-0 bottom-0 border-b border-transparent ${link ? 'group-hover:border-current' : ''}`}></span>
           </a> 
       </h3>
       </div>

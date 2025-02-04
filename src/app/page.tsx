@@ -74,7 +74,8 @@ export default function Home() {
       </div> */}
 
       <h1 className={`text-5xl font-newsreader ${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'} mt-28 text-center`}>
-        Caterina Mammola
+        <span>Caterina Mammola</span>
+        <span className="text-5xl text-[#c02e7e] inline ml-1">.</span>
       </h1>
 
       <div className="flex justify-center gap-6 mt-2">
@@ -150,16 +151,7 @@ teaching coding to primary school children in Edinburgh.
       "For my dissertation, I am exploring XAI techniques to enhance the trustworthiness of brain cancer detection systems. Specifically, I am building on prior work with concept bottleneck models, which integrate clinical concepts into the AI pipeline. I am collaborating closely with a clinician to identify key clinical concepts from medical reports, which will be incorporated into the model training process to improve interpretability and reliability." 
       image="/posts/diss.png"
       tech={["Python", "TensorFlow"]} />
-
-      <Post title="FlatMouse" 
-      type={isDarkMode ? "light" : "dark"}
-      description=
-      "I built a website for University of Edinburgh students to leave reviews on flats and accommodations they've lived in. The platform allows users to add detailed tags, such as mice, mould, or heating issues, to help future tenants make informed decisions. Users can explore an interactive map to view reviews and find accommodations in different areas, and even filter average ratings by letting agency." 
-      link="https://flatmouse.co.uk" 
-      image="/posts/flatmouse.mov"
-      tech={["React", "Amazon S3", "Amazon EC2", "MongoDB", "Node.js", "Express"]} />
-
-      
+ 
 
       <Post title="CompSoc Website" 
       type={isDarkMode ? "light" : "dark"}
@@ -167,6 +159,15 @@ teaching coding to primary school children in Edinburgh.
       link="https://comp-soc.com" 
       image="/posts/compsoc-website-vid.mov"
       tech={["React", "Next.js", "Tailwind"]} />
+
+<Post title="FlatMouse" 
+      type={isDarkMode ? "light" : "dark"}
+      description=
+      "I built a website for University of Edinburgh students to leave reviews on flats and accommodations they've lived in. The platform allows users to add detailed tags, such as mice, mould, or heating issues, to help future tenants make informed decisions. Users can explore an interactive map to view reviews and find accommodations in different areas, and even filter average ratings by letting agency." 
+      link="https://flatmouse.co.uk" 
+      image="/posts/flatmouse.mov"
+      tech={["React", "Amazon S3", "Amazon EC2", "MongoDB", "Node.js", "Express"]} />
+
 
 <Post title="Nail Polish Finder" 
       type={isDarkMode ? "light" : "dark"}
