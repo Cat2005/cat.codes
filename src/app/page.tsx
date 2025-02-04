@@ -77,27 +77,65 @@ export default function Home() {
         Caterina Mammola
       </h1>
 
-      <div className="flex justify-center gap-2 mt-2">
-        <a href="https://www.linkedin.com/in/caterina-m/"  
-           target="_blank" 
-           rel="noopener noreferrer"
-           className={`font-newsreader hover:underline text-md ${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'} hover:text-[#c02e7e] transition-colors`}>
-          LinkedIn
-        </a>
-        <span className={`font-newsreader text-md ${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'}`}>|</span>
-        <a href="https://github.com/Cat2005" 
-           target="_blank" 
-           rel="noopener noreferrer"
-           className={`font-newsreader hover:underline text-md ${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'} hover:text-[#c02e7e] transition-colors`}>
-          GitHub
-        </a>
+      <div className="flex justify-center gap-6 mt-2">
+        <div>
+          <a href="https://www.linkedin.com/in/caterina-m/"  
+             target="_blank" 
+             rel="noopener noreferrer"
+             className={`font-newsreader text-md text-[#c02e7e] transition-colors relative group`}>
+            <span className="inline-flex items-center">
+              LinkedIn
+              <HiArrowUpRight className="inline mb-0.5 text-xs ml-0.5" />
+            </span>
+            <span className="absolute left-0 right-0 bottom-0 border-b border-transparent group-hover:border-current"></span>
+          </a> 
+        </div>
+        
+        {/* <span className={`font-newsreader text-md ${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'}`}>|</span> */}
+        <div>
+          <a href="https://github.com/Cat2005"  
+             target="_blank" 
+             rel="noopener noreferrer"
+             className={`font-newsreader text-md text-[#c02e7e] transition-colors relative group`}>
+            <span className="inline-flex items-center">
+              GitHub
+              <HiArrowUpRight className="inline mb-0.5 text-xs ml-0.5" />
+            </span>
+            <span className="absolute left-0 right-0 bottom-0 border-b border-transparent group-hover:border-current"></span>
+          </a> 
+        </div>
       </div>
 
       <p className={`${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'} mt-6 font-newsreader `}>
-      Hi, I’m Caterina, a 4th-year CS and AI student at the University of Edinburgh. I’m passionate about web dev and love doing hackathons. Previously, I interned at <a href='https://www.goldmansachs.com/our-firm/careers/students/students-at-gs/software-engineering/' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e] hover:underline'> Goldman Sachs </a> as a Software Engineer. Currently, I serve as the Tech Secretary and Sponsorship Coordinator for <a href='https://www.comp-soc.com' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e] hover:underline'> CompSoc</a>, where I manage technical infrastructure and build relationships with sponsors.
+      Hi, I'm Caterina, a 4th-year CS and AI student at the University of Edinburgh. I'm passionate about web dev and love doing hackathons. 
+      Previously, I interned at <div className='text-[#c02e7e] hover:underline inline'> Goldman Sachs </div> as a Software Engineer. 
+      Currently, I serve as the Tech Secretary and Sponsorship Coordinator 
+      for <a href="https://comp-soc.com"  
+             target="_blank" 
+             rel="noopener noreferrer"
+             className={`mr-1 font-newsreader text-md text-[#c02e7e] transition-colors relative group`}>
+            <span className="inline-flex items-center">
+              CompSoc
+              <HiArrowUpRight className="inline mb-0.5 text-xs ml-0.5" />
+            </span>
+            <span className="absolute left-0 right-0 bottom-0 border-b border-transparent group-hover:border-current"></span>
+          </a> 
+       where I manage technical infrastructure and build relationships with sponsors.
 <br></br>
 <br></br>
-Aside from this, I love to teach. I’ve taught maths and computer science for over four years and currently work part-time at <a href='https://www.codecadets.co.uk' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e] hover:underline'> Code Cadets</a>, teaching coding to primary school children in Edinburgh.
+Aside from this, I love to teach. I've taught maths and computer science for over four years and 
+currently work part-time at 
+<a href="https://www.codecadets.co.uk"  
+             target="_blank" 
+             rel="noopener noreferrer"
+             className={`mr-1 font-newsreader text-md text-[#c02e7e] transition-colors relative group`}>
+            <span className="inline-flex items-center">
+              Code Cadets
+              <HiArrowUpRight className="inline mb-0.5 text-xs ml-0.5" />
+            </span>
+            <span className="absolute left-0 right-0 bottom-0 border-b border-transparent group-hover:border-current"></span>
+          </a> 
+teaching coding to primary school children in Edinburgh.
       </p>
 
       <p className={`${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'} mt-4 font-newsreader text-md`}><span className="font-bold">Languages spoken: </span>English (native), Italian (native), French (fluent)</p>
@@ -116,7 +154,7 @@ Aside from this, I love to teach. I’ve taught maths and computer science for o
       <Post title="FlatMouse" 
       type={isDarkMode ? "light" : "dark"}
       description=
-      "I built a website for University of Edinburgh students to leave reviews on flats and accommodations they’ve lived in. The platform allows users to add detailed tags, such as mice, mould, or heating issues, to help future tenants make informed decisions. Users can explore an interactive map to view reviews and find accommodations in different areas, and even filter average ratings by letting agency." 
+      "I built a website for University of Edinburgh students to leave reviews on flats and accommodations they've lived in. The platform allows users to add detailed tags, such as mice, mould, or heating issues, to help future tenants make informed decisions. Users can explore an interactive map to view reviews and find accommodations in different areas, and even filter average ratings by letting agency." 
       link="https://flatmouse.co.uk" 
       image="/posts/flatmouse.mov"
       tech={["React", "Amazon S3", "Amazon EC2", "MongoDB", "Node.js", "Express"]} />
@@ -134,12 +172,12 @@ Aside from this, I love to teach. I’ve taught maths and computer science for o
       type={isDarkMode ? "light" : "dark"}
       description= "I designed a website that allows users to search through thousands of nail polishes by hex code. This was my first experience creating something for a broader, unknown internet audience. The project quickly gained traction, with some of my posts reaching 5 million views  and the site receiving more than 100,000 visits within 24 hours. The response was overwhelmingly positive—many people appreciated the functionality and left encouraging comments. I also received valuable feedback that has allowed me to iterate on the website and improve its usability."
       link="https://nailpolishfinder.com" 
-      image="/posts/photo-tutorial.mov"
+      image="/posts/nailpolishfinder.mov"
       tech={["React", "Next.js", "Tailwind", "Vercel", "Python", "Selenium"]} />
 
       <Post title="Ray tracer in C++"
       type={isDarkMode ? "light" : "dark"}
-      description="For my <a href='https://ksubr.github.io/CGR2024/#Tutorials' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e]'> Computer Graphics: Rendering </a> course, I developed a ray tracer in C++. While I don’t usually highlight university coursework, this one was particularly significant as it was both technically challenging and my first time using C++. The ray tracer includes advanced features such as textures, an acceleration hierarchy, bidirectional reflectance distribution functions (BRDFs), and volumetrics. This project deepened my understanding of rendering techniques and taught me how to optimize performance in a low-level programming environment. I achieved 94% for this work."
+      description="For my <a href='https://ksubr.github.io/CGR2024/#Tutorials' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e]'> Computer Graphics: Rendering </a> course, I developed a ray tracer in C++. While I don't usually highlight university coursework, this one was particularly significant as it was both technically challenging and my first time using C++. The ray tracer includes advanced features such as textures, an acceleration hierarchy, bidirectional reflectance distribution functions (BRDFs), and volumetrics. This project deepened my understanding of rendering techniques and taught me how to optimize performance in a low-level programming environment. I achieved 94% for this work."
       image="/posts/raytracer-imgs.png"
       tech={["C++ (no libraries allowed)"]} />
 
@@ -156,13 +194,17 @@ Aside from this, I love to teach. I’ve taught maths and computer science for o
 
 <ExperienceCard title="Tech Secretary, CompSoc"  date="2024-ongoing"
       type={isDarkMode ? "dark" : "light"}
-      description="As the Tech Secretary for CompSoc, I am responsible for managing the society's technical infrastructure. This includes overseeing CompSoc's Linux servers and handling domain management. Additionally, I maintain and manage the <a href='https://infball.comp-soc.com/' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e]'> website for Infball</a>,  supporting an event with over 300 attendees with features such as integrated payment processing, QR code generation, and automated email confirmations."
+      description="As the Tech Secretary for CompSoc, I am responsible for managing the society's technical infrastructure. This includes overseeing CompSoc's Linux servers and handling domain management. Additionally, I maintain and manage the <a href='https://infball.comp-soc.com/'> website for Infball</a>,  supporting an event with over 300 attendees with features such as integrated payment processing, QR code generation, and automated email confirmations."
       tech={["Discord", "GitHub", "Hackathons"]} />
 
 
       <ExperienceCard title="Sponsorship Coordinator, CompSoc"  date="2024-ongoing"
       type={isDarkMode ? "dark" : "light"}
-      description="As the Sponsorship Coordinator for CompSoc, I manage the society's sponsorship efforts. My responsibilities include identifying potential sponsors, reaching out to them, and hosting calls to discuss partnership opportunities. Once a sponsor is signed on, I ensure they are satisfied and their needs are met throughout the partnership. This year, I successfully secured sponsorships from companies including Meta, G-Research, and QRT. You can see all our <a href='https://comp-soc.com/sponsors/' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e]'> sponsors for the year on this page</a> (which I designed!)"
+      description="As the Sponsorship Coordinator for CompSoc, I secure funding from sponsors to enable us to run events such as <a href='https://hacktheburgh.com/'>Hack The Burgh</a>and <a href='https://infball.comp-soc.com/'>Infball</a>. 
+       My responsibilities include identifying potential sponsors, setting up calls with them, designing packages which suit their needs and negotiating a price. 
+       Once a sponsor is signed on, I maintain a relationship with them throughout the partnership. 
+      This year, I successfully secured sponsorships from 8 companies including Meta, Optiver, and Jane Street. 
+       <a href='https://comp-soc.com/sponsors/'> You can see our all sponsors on this page</a> (which I built!)"
       tech={["Prometheus", "Grafana", "Java", "PromQL"]} />
 
 
