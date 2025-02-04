@@ -204,7 +204,7 @@ teaching coding to primary school children in Edinburgh.
        My responsibilities include identifying potential sponsors, setting up calls with them, designing packages which suit their needs and negotiating a price. 
        Once a sponsor is signed on, I maintain a relationship with them throughout the partnership. 
       This year, I successfully secured sponsorships from 8 companies including Meta, Optiver, and Jane Street. 
-       <a href='https://comp-soc.com/sponsors/'> You can see our all sponsors on this page</a> (which I built!)"
+       <a href='https://comp-soc.com/sponsors/'> You can see our all sponsors on this page</a> (which I designed!)"
       tech={["Prometheus", "Grafana", "Java", "PromQL"]} />
 
 
