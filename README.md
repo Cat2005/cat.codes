@@ -1,1 +1,1 @@
-my personal website! built with Next, React + Typescript.
+[my personal website!](https://cat.codes) built with Next, React + Typescript.
