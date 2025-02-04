@@ -147,9 +147,7 @@ teaching coding to primary school children in Edinburgh.
 
       <Post title="XAI for Brain MRI Glioblastoma Diagnosis" 
       type={isDarkMode ? "light" : "dark"}
-      description=
-      "For my dissertation, I am exploring XAI techniques to enhance the trustworthiness of brain cancer detection systems. 
-      Specifically, I am building on prior work with <a href='https://github.com/yewsiang/ConceptBottleneck' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e]'> concept bottleneck models</a>
+      description="For my dissertation, I am exploring XAI techniques to enhance the trustworthiness of brain cancer detection systems. Specifically, I am building on prior work with <a href='https://github.com/yewsiang/ConceptBottleneck' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e]'> concept bottleneck models</a>
       to integrate clinical concepts into the pipeline. I am collaborating closely with a clinician to identify key clinical concepts from medical reports, which will be incorporated into the model training process to improve interpretability." 
       image="/posts/diss.png"
       tech={["Python", "TensorFlow"]} />
