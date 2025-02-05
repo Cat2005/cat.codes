@@ -84,7 +84,7 @@ export default function Home() {
              target="_blank" 
              rel="noopener noreferrer"
              className={`font-newsreader text-md text-[#c02e7e] transition-colors relative group`}>
-            <span className="inline-flex items-center">
+            <span className="inline-flex items-center transition-transform duration-200 hover:scale-[1.07]">
               LinkedIn
               <HiArrowUpRight className="inline mb-0.5 text-xs ml-0.5" />
             </span>
@@ -98,7 +98,7 @@ export default function Home() {
              target="_blank" 
              rel="noopener noreferrer"
              className={`font-newsreader text-md text-[#c02e7e] transition-colors relative group`}>
-            <span className="inline-flex items-center">
+            <span className="inline-flex items-center transition-transform duration-200 hover:scale-[1.07]">
               GitHub
               <HiArrowUpRight className="inline mb-0.5 text-xs ml-0.5" />
             </span>
@@ -115,7 +115,7 @@ export default function Home() {
              target="_blank" 
              rel="noopener noreferrer"
              className={`mr-1 font-newsreader text-md text-[#c02e7e] transition-colors relative group`}>
-            <span className="inline-flex items-center">
+            <span className="inline-flex items-center transition-transform duration-200 hover:scale-[1.04]">
               CompSoc
               <HiArrowUpRight className="inline mb-0.5 text-xs ml-0.5" />
             </span>
@@ -130,7 +130,7 @@ currently work part-time at
              target="_blank" 
              rel="noopener noreferrer"
              className={`mr-1 font-newsreader text-md text-[#c02e7e] transition-colors relative group`}>
-            <span className="inline-flex items-center">
+            <span className="inline-flex items-center transition-transform duration-200 hover:scale-[1.04]">
               Code Cadets
               <HiArrowUpRight className="inline mb-0.5 text-xs ml-0.5" />
             </span>
@@ -335,7 +335,26 @@ teaching coding to primary school children in Edinburgh.
 <p className={`mb-24 text-center ${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'} mt-8 font-newsreader text-md`}>
     Thanks for checking out my website ❤️ ! 
     <br></br>
-    If you have any questions, please don&apos;t hesitate to <a href='mailto:caterina.mammola20@gmail.com' className='text-[#c02e7e] underline'> contact me on email</a> or <a href='https://www.linkedin.com/in/caterina-m/' className='text-[#c02e7e] underline'> LinkedIn</a>.
+    If you have any questions, please don&apos;t hesitate to <a href="mailto:caterina.mammola20@gmail.com"  
+             target="_blank" 
+             rel="noopener noreferrer"
+             className={`mr-1 font-newsreader text-md text-[#c02e7e] transition-colors relative group`}>
+            <span className="inline-flex items-center transition-transform duration-200 hover:scale-[1.02]">
+              contact me on email
+              <HiArrowUpRight className="inline mb-0.5 text-xs ml-0.5" />
+            </span>
+            <span className="absolute left-0 right-0 bottom-0 border-b border-transparent group-hover:border-current"></span>
+          </a> 
+    or <a href="https://www.linkedin.com/in/caterina-m/"  
+             target="_blank" 
+             rel="noopener noreferrer"
+             className={`mr-1 font-newsreader text-md text-[#c02e7e] transition-colors relative group`}>
+            <span className="inline-flex items-center transition-transform duration-200 hover:scale-[1.02]">
+              LinkedIn
+              <HiArrowUpRight className="inline mb-0.5 text-xs ml-0.5" />
+            </span>
+            <span className="absolute left-0 right-0 bottom-0 border-b border-transparent group-hover:border-current"></span>
+          </a> 
   </p>
     </div>
 
