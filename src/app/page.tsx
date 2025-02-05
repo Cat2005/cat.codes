@@ -157,7 +157,7 @@ teaching coding to primary school children in Edinburgh.
       type={isDarkMode ? "light" : "dark"}
       description="I co-developed the new website for CompSoc, the Computer Science Society at the University of Edinburgh, alongside my friend 
       <a href='https://www.tomasmaillo.com' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e]'> Tomas Maillo </a>. 
-      // Our goal was to create a modern and functional platform for members to easily access information. We integrated features like pulling events directly from Google Calendar to ensure the event schedule stays up-to-date and displaying the live number of members on Discord. The website gets over 7000 unique visitors per month." 
+      Our goal was to create a modern and functional platform for members to easily access information. We integrated features like pulling events directly from Google Calendar to ensure the event schedule stays up-to-date and displaying the live number of members on Discord. The website gets over 7000 unique visitors per month." 
       link="https://comp-soc.com" 
       image="/posts/compsoc-website-vid.mov"
       tech={["React", "Next.js", "Tailwind"]} />
@@ -184,8 +184,15 @@ teaching coding to primary school children in Edinburgh.
       image="/posts/raytracer-imgs.png"
       tech={["C++ (no libraries allowed)"]} />
 
-      <p className={`${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'} mt-4 font-newsreader text-lg`}>To see more of my work, including 5+ prize-winning hackathon projects,  <a href='https://github.com/Cat2005' rel='noopener noreferrer' target='_blank' className='text-[#c02e7e] underline'> check out my GitHub<HiArrowUpRight className="text-[#c02e7e] inline mb-1" /></a>! </p>
-
+<a href='https://github.com/Cat2005' className="text-lg" rel='noopener noreferrer' target='_blank'>
+  <p className={`${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'} mt-4 font-newsreader transition-transform duration-200 hover:scale-[1.05]`}>
+    To see more of my work, including 5+ prize-winning hackathon projects,{' '}
+    <span className="text-[#c02e7e] border-b border-current text-xl">
+      check out my GitHub!
+      <HiArrowUpRight className="inline mb-0.5 text-xs ml-0.5" />
+    </span>
+  </p>
+</a>
 <h2 className={`text-center text-2xl font-newsreader ${isDarkMode ? 'text-[#FFDCDF]' : 'text-[#773035]'} mt-12 mb-8`}>
         Professional Experience
       </h2>
