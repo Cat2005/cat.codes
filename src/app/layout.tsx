@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Newsreader } from "next/font/google";
 import { Inter } from 'next/font/google'
+import { Analytics } from "@vercel/analytics/react"
+
 
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -42,6 +44,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${newsreader.variable} ${inter.variable} antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
